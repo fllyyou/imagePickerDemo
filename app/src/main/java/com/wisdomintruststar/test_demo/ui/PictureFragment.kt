@@ -47,7 +47,7 @@ class PictureFragment : Fragment() {
         fun takePhoto() {
             imagePicker(isCrop = true) {
                 it?.let { list ->
-                    this@PictureFragment.binder.pictureView.setImageURI(Uri.fromFile(File(list.first().realPath)))
+                    this@PictureFragment.binder.pictureView.setImageURI(Uri.fromFile(File(list.first().cutPath)))
                     this@PictureFragment.binder.executePendingBindings()
                 }
             }
